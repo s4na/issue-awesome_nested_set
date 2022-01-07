@@ -10,7 +10,6 @@ class CategoryTest < ActiveSupport::TestCase
     new_parent = Category.create!(name: 'new_parent')
 
     p '---------'
-    child.parent_id = new_parent.id
-    child.save
+    child.update(parent_id: new_parent.id)
   end
 end
