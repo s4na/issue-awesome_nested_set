@@ -1,7 +1,10 @@
+# README
+
+## Enviroments
+
 - Rails 6.1.4.4
 - Ruby 2.7.5
-- gem awesome_nested_set 3.4.0
-- minitest 5.15.0
+- awesome_nested_set 3.4.0
 
 ## Usage
 
@@ -9,13 +12,13 @@
 ./bin/setup
 ```
 
-## テスト
+## Test
 
 ```
 ./bin/rails test
 ```
 
-### テストの実行結果
+### Results
 
 ```
 ❯ ./bin/rails test
@@ -43,4 +46,4 @@ Finished in 0.526165s, 1.9005 runs/s, 0.0000 assertions/s.
 
 ```
 
-おかしな点: new_parent をセットして保存する処理なのに、 old_parent が表示されてしまっている。
+The old_parent was displayed instead of the new_parent.
