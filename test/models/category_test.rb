@@ -3,13 +3,14 @@ require "test_helper"
 class CategoryTest < ActiveSupport::TestCase
   test "the truth" do
     # https://github.com/collectiveidea/awesome_nested_set/wiki/Awesome-nested-set-cheat-sheet
-    science = Category.create!(:name => 'Science')
-    assert science
+    old_parent = Category.create!(name: 'old_parent')
+    child = Category.create!(name: 'child')
+    child.move_to_child_of(old_parent)
+    child.save
+    new_parent = Category.create!(name: 'new_parent')
 
-    physics = Category.create!(:name => 'Physics')
-    physics.move_to_child_of(science)
-    assert physics.parent
-
-    assert_equal physics.parent, science
+    p '---------'
+    child.parent_id = new_parent.id
+    child.save
   end
 end
