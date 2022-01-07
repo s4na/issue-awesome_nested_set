@@ -12,5 +12,5 @@
 ## テスト
 
 ```
-bundle exec rails test
+./bin/rails test
 ```
