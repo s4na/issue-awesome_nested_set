@@ -47,3 +47,7 @@ Finished in 0.526165s, 1.9005 runs/s, 0.0000 assertions/s.
 ```
 
 The old_parent was displayed instead of the new_parent.
+
+## References
+
+https://github.com/collectiveidea/awesome_nested_set/issues/461
